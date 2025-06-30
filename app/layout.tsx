@@ -26,14 +26,6 @@ export const metadata: Metadata = {
       "Monsba is a leading construction company specializing in residential and commercial projects. We deliver quality construction services with a focus on innovation, sustainability, and client satisfaction.",
     url: "https://monsba.vercel.app",
     siteName: "Monsba",
-    images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Monsba Construction Company",
-      },
-    ],
   },
 };
 

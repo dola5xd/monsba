@@ -8,6 +8,11 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "browserslist": [
+    "defaults and supports es6-module",
+    "not dead",
+    "not op_mini all"
+  ],
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
     "lenis": "^1.3.4",

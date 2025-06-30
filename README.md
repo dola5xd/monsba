@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Monsba - Trusted Partner in Construction
 
-## Getting Started
+![Estatein Hero](https://socialify.git.ci/dola5xd/monsba/image?custom_language=Next.js&language=1&name=1&owner=1&stargazers=1&theme=Dark)
 
-First, run the development server:
+> Welcome to **Monsba**, a professional construction company landing page showcasing modern design, smooth animations, and responsive layout.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 **Live Preview**
+
+Explore the live website: [https://monsba.vercel.app](https://monsba.vercel.app)
+
+---
+
+## 🛠️ **Technologies Used**
+
+### **Core Stack**
+
+- **Next.js** (v15.3.4): React framework for production
+- **React** (v19.0.0): UI library
+- **TypeScript** (v5.8.3): Static typing
+- **Tailwind CSS** (v4.1.11): Utility-first CSS
+
+### **UX & Animations**
+
+- **Lenis** (v1.3.4): Smooth scrolling
+- **Motion** (v12.19.2): Declarative animations
+- **Swiper** (v11.2.9): Modern mobile touch sliders
+
+### **Forms & Validation**
+
+- **React Hook Form** (v7.59.0)
+- **Zod** (v3.25.67): Schema validation
+- **@hookform/resolvers** (v5.1.1)
+
+### **Icons**
+
+- **React Icons** (v5.5.0)
+
+---
+
+## 📂 **Project Structure**
+
+```plaintext
+monsba/
+├── app/                    # App Router files
+│   ├── _components/        # Shared layout components
+│   ├── _components/Sections/  # Section-specific UI
+│   └── globals.css         # Global styles
+├── public/                 # Static assets (images, OG image, etc.)
+├── package.json
+├── tailwind.config.js
+└── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ **Scripts**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run these scripts to manage the project:
 
-## Learn More
+- `npm run dev` - Start the development server.
+- `npm run build` - Build the production-ready version of the site.
+- `npm run start` - Start the production server.
+- `npm run lint` - Run linting for the codebase.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌟 **Key Features**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- ✨ Smooth scroll effects with Lenis
 
-## Deploy on Vercel
+- 🎞️ Elegant animations via Motion
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 📱 Fully responsive layout
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- ✅ Type-safe forms using Zod and React Hook Form
+
+- 🔍 Optimized for modern browsers (via browserslist)
+
+- 🌐 SEO-ready with Open Graph metadata
+
+---
+
+## 🎬 Demo
+
+You can try out the live demo of the My portfolio application here:  
+[Monsba Demo](https://monsba.vercel.app/)
+
+---
+
+## 📜 **License**
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👤 **Credits**
+
+**Developed by: [Adel Yasser](https://github.com/dola5xd)**
+
+**🎨 Design Credit: [ Kareem Yasser](https://www.behance.net/kareemyasser5)**
+
+## 📧 **Contact**
+
+For development inquiries:
+**adelyasser5002@gmail.com**
+
+Contact Design owner:
+**kareemyasserg6@gmail.com**
+
+---
+
+💖 Made with passion by **Adel Yasser**
