@@ -74,7 +74,7 @@ const renderStars = (rating: number) => {
 
 function TestimonialsSlider() {
   return (
-    <div className="w-1/2">
+    <div className="w-full lg:w-1/2">
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
@@ -83,12 +83,13 @@ function TestimonialsSlider() {
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         speed={1000}
         draggable={true}
-        className="testimonial-swiper rounded-xl shadow-lg lato-font "
+        grabCursor={true}
+        className="shadow-lg testimonial-swiper rounded-xl lato-font"
       >
         {testimonials.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col gap-4 px-8 h-[225px]">
-              <div className="flex items-center justify-between">
+            <div className="flex flex-col-reverse lg:flex-col gap-4 p-8 lg:py-0 md:px-8 h-fit lg:h-[225px]">
+              <div className="flex flex-col justify-between gap-y-1.5 lg:items-center lg:flex-row">
                 <div className="flex items-center gap-4">
                   {item.avatar.length === 1 ? (
                     <Image
@@ -96,7 +97,7 @@ function TestimonialsSlider() {
                       alt={item.name}
                       width={48}
                       height={48}
-                      className="rounded-full object-cover h-12 aspect-square object-top"
+                      className="object-cover object-top h-12 rounded-full aspect-square"
                     />
                   ) : (
                     <div className="flex items-center">
@@ -115,15 +116,19 @@ function TestimonialsSlider() {
                     </div>
                   )}
                   <div className="flex flex-col gap-y-1">
-                    <h3 className="font-semibold ">{item.name}</h3>
-                    <p className="text-sm text-muted">{item.role}</p>
+                    <h3 className="text-sm font-semibold sm:text-base">
+                      {item.name}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-muted">{item.role}</p>
                   </div>
                 </div>
-                <div className="flex text-yellow-500 text-lg">
+                <div className="flex self-end text-sm text-yellow-500 sm:text-lg md:text-xl xl:text-lg">
                   {renderStars(item.rating)}
                 </div>
               </div>
-              <p className="text-gray-700 text-xl">“{item.message}”</p>
+              <p className="text-sm text-gray-700 sm:text-base md:text-xl min-h-3/4">
+                “{item.message}”
+              </p>
             </div>
           </SwiperSlide>
         ))}

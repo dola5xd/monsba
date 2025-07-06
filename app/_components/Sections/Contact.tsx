@@ -23,57 +23,57 @@ function Contact() {
       id="contact"
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
+      viewport={{ once: true, amount: "some" }}
       variants={{
         hidden: { opacity: 0 },
         show: { opacity: 1, transition: { staggerChildren: 0.3 } },
       }}
-      className="flex flex-col items-center justify-center min-h-screen px-4 py-10 bg-white"
+      className="flex flex-col items-center justify-center px-4 py-10 bg-white md:px-8 lg:px-4 min-h-dvh"
     >
       <MotionH2
         variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
-        className="text-5xl font-bold text-center mb-10"
+        className="py-10 text-3xl font-bold text-center sm:text-5xl"
       >
         Ready to Party?
       </MotionH2>
 
       <MotionDiv
         variants={{ hidden: { opacity: 0 }, show: { opacity: 1 } }}
-        className="flex flex-col md:flex-row items-stretch justify-center w-full max-w-6xl rounded-3xl overflow-hidden bg-gray-50 shadow-lg"
+        className="flex flex-col items-stretch justify-center w-full max-w-6xl overflow-hidden shadow-lg md:flex-row rounded-3xl bg-gray-50"
       >
-        <MotionDiv className="bg-foreground text-white w-full md:w-1/2 px-16 py-10 flex flex-col justify-center gap-7 bg-[url('/assets/Shape.png')] bg-no-repeat bg-[120%_-20%]">
-          <h2 className="text-4xl font-bold">Get in touch</h2>
+        <MotionDiv className="bg-foreground text-white w-full md:w-1/2 px-7 sm:px-16 md:px-7 lg:px-16 py-10 flex flex-col justify-center gap-7 bg-[url('/assets/Shape.png')] bg-no-repeat bg-[120%_-20%]">
+          <h2 className="text-2xl font-bold sm:text-4xl">Get in touch</h2>
           <ul className="flex flex-col gap-7 lato-font">
-            <li className="flex items-center gap-4">
-              <span className="bg-white/20 h-16 w-16 flex items-center justify-center rounded-full">
-                <IoIosMail size={32} />
+            <li className="flex items-center gap-2 sm:gap-4">
+              <span className="flex items-center justify-center w-10 h-10 text-xl rounded-full sm:w-16 sm:h-16 sm:text-4xl bg-white/20">
+                <IoIosMail />
               </span>
               <p>
-                <span className="font-semibold text-lg">Email Us</span>
+                <span className="text-lg font-semibold">Email Us</span>
                 <br />
                 <Link href="mailto:info@golio.com">info@golio.com</Link>
               </p>
             </li>
-            <li className="flex items-center gap-4">
-              <span className="bg-white/20 h-16 w-16 flex items-center justify-center rounded-full">
-                <MdOutlinePhoneInTalk size={32} />
+            <li className="flex items-center gap-2 sm:gap-4">
+              <span className="flex items-center justify-center w-10 h-10 text-xl rounded-full sm:w-16 sm:h-16 sm:text-4xl bg-white/20">
+                <MdOutlinePhoneInTalk />
               </span>
               <p>
-                <span className="font-semibold text-lg">Phone</span>
+                <span className="text-lg font-semibold">Phone</span>
                 <br />
                 <Link href="tel:+1-202-555-0138">+1-202-555-0138</Link>
               </p>
             </li>
-            <li className="flex items-center gap-4">
-              <span className="bg-white/20 h-16 w-16 flex items-center justify-center rounded-full">
-                <HiOutlineLocationMarker size={32} />
+            <li className="flex items-center gap-2 sm:gap-4">
+              <span className="flex items-center justify-center w-10 h-10 text-xl rounded-full sm:w-16 sm:h-16 sm:text-4xl bg-white/20">
+                <HiOutlineLocationMarker />
               </span>
-              <p>
-                <span className="font-semibold text-lg">
+              <p className="text-sm sm:text-base">
+                <span className="text-sm font-semibold sm:text-lg">
                   901 N Pitt Str., Suite 170
                 </span>
                 <br />
-                Alexandria, VA 22314, USA
+                Floredia, VA 22314, USA
               </p>
             </li>
           </ul>
@@ -95,7 +95,7 @@ function Contact() {
         </MotionDiv>
 
         {isSubmit ? (
-          <MotionDiv className="w-full md:w-1/2 flex items-center justify-center p-10 text-center text-primary lato-font">
+          <MotionDiv className="flex items-center justify-center w-full p-10 text-center md:w-1/2 text-primary lato-font">
             <p className="text-2xl font-semibold">
               Thank you for contacting us! We will get back to you soon.
             </p>

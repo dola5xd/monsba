@@ -33,7 +33,7 @@ function Testimonials() {
       id="testimonials"
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: "some" }}
       variants={{
         hidden: { opacity: 0, y: 40 },
         show: {
@@ -42,14 +42,14 @@ function Testimonials() {
           transition: { duration: 0.6, ease: "easeOut" },
         },
       }}
-      className="relative flex items-center justify-between p-20 gap-y-10"
+      className="relative flex flex-col items-center justify-between px-4 py-10 sm:p-10 lg:py-20 xl:p-20 lg:flex-row gap-y-10"
     >
-      <MotionDiv className="flex flex-col items-start text-6xl font-bold w-1/2">
+      <MotionDiv className="flex flex-col items-start gap-y-1.5 md:gap-y-4 text-3xl font-bold lg:text-5xl lg:max-w-sm xl:max-w-lg xl:text-6xl lg:w-1/2 px-6 sm:px-0">
         <MotionSpan
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.4 }}
-          className="text-xl text-muted lato-font mb-4"
+          className="text-base md:text-xl text-muted lato-font"
         >
           Testimonial
         </MotionSpan>

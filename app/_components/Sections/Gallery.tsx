@@ -14,7 +14,7 @@ function Gallery() {
       id="gallery"
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true }}
       variants={{
         hidden: { opacity: 0 },
         show: {
@@ -24,13 +24,13 @@ function Gallery() {
           },
         },
       }}
-      className="relative flex flex-col items-center p-20 bg-center bg-cover gap-y-10 gallery-bg"
+      className="relative flex flex-col items-center p-10 bg-center bg-cover lg:p-20 gap-y-10 gallery-bg"
     >
       <MotionH2
         variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
-        className="flex flex-col items-center text-5xl font-bold"
+        className="flex flex-col items-center text-4xl font-bold text-center md:text-5xl md:text-start"
       >
-        <MotionSpan className="text-xl text-muted lato-font">
+        <MotionSpan className="text-base md:text-xl text-muted lato-font">
           Monsba Gallery
         </MotionSpan>
         Moments That Matter

@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${PlayfairFont.className} ${LatoFont.variable} antialiased min-h-screen min-w-screen`}
+        className={`${PlayfairFont.className} ${LatoFont.variable} antialiased min-h-dvh min-w-screen scroll-smooth`}
       >
         <Lenis>
           <Header />

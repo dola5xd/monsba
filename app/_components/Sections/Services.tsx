@@ -28,18 +28,23 @@ function Services() {
       variants={container}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: "some" }}
       id="services"
-      className="flex flex-col items-center justify-center min-h-screen px-20 gap-y-10"
+      className="flex flex-col items-center justify-center px-4 py-10 sm:px-10 min-h-dvh lg:px-20 gap-y-10 "
     >
       <MotionH2
         variants={item}
-        className="flex flex-col items-center text-5xl font-bold"
+        className="flex flex-col items-center text-2xl font-bold text-center sm:text-3xl lg:text-4xl xl:text-5xl"
       >
-        <span className="text-xl text-muted lato-font">Why Monsba?</span>
+        <span className="text-sm sm:text-base lg:text-xl text-muted lato-font">
+          Why Monsba?
+        </span>
         Designed to Impress, Planned to Perfection
       </MotionH2>
-      <MotionDiv variants={container} className="flex items-center gap-4">
+      <MotionDiv
+        variants={container}
+        className="flex flex-col items-center gap-4 md:justify-center md:flex-wrap md:flex-row xl:flex-nowrap"
+      >
         <ServicesCard
           Icon={IoDocumentTextOutline}
           title="Professional Planning Team"

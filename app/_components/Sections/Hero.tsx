@@ -29,20 +29,29 @@ function Hero() {
       initial="hidden"
       whileInView="show"
       id="hero"
-      className="flex items-center justify-between px-20 py-10 gap-x-20"
+      className="flex flex-col-reverse items-center justify-between py-4 md:flex-row gap-y-4 px-7 md:py-10 lg:px-20 gap-x-20"
     >
       <MotionDiv
         variants={container}
-        className="flex flex-col items-start justify-center gap-y-7 max-w-1/2"
+        className="flex flex-col items-center justify-center md:items-start gap-y-4 lg:gap-y-7 md:max-w-1/2"
       >
-        <MotionH1 variants={item} className="text-6xl font-bold">
+        <MotionH1
+          variants={item}
+          className="text-2xl font-bold text-center sm:text-3xl md:text-start lg:text-5xl xl:text-6xl"
+        >
           Unforgettable Parties Seamlessly Organized
         </MotionH1>
-        <MotionP variants={item} className="text-xl text-muted lato-font">
+        <MotionP
+          variants={item}
+          className="max-w-sm text-sm text-center sm:text-base md:text-start md:max-w-full lg-text-lg xl:text-xl text-muted lato-font"
+        >
           Monsba transforms your ideas into seamless, stylish celebrations —
           birthdays, weddings, or corporate events.
         </MotionP>
-        <MotionDiv variants={item} className="flex items-center gap-x-4">
+        <MotionDiv
+          variants={item}
+          className="flex flex-col items-center gap-4 sm:flex-row"
+        >
           <Button className="outline-1 outline-primary">
             Get a Free Quote
           </Button>
@@ -57,7 +66,7 @@ function Hero() {
 
       <MotionDiv
         variants={container}
-        className="grid w-full grid-cols-6 grid-rows-6 gap-4 p-4 mx-auto max-w-2/5"
+        className="grid w-full grid-cols-6 grid-rows-6 gap-2 p-4 mx-auto xl:gap-4 sm:max-w-2/3 md:max-w-1/2 xl:max-w-2/5"
       >
         <MotionDiv
           variants={item}

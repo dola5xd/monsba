@@ -2,7 +2,6 @@
 
 import GalleryCard from "./GalleryCard";
 import { useState } from "react";
-import { div as MotionDiv } from "motion/react-client";
 
 const images = [
   "/assets/gallery/gallery-1.webp",
@@ -17,24 +16,19 @@ function GallerySlider() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
-    <div className="flex items-center gap-6 px-4 overflow-x-auto">
+    <div className="flex flex-col items-center gap-4 px-4 overflow-x-hidden md:flex-row md:flex-wrap lg:flex-nowrap lg:gap-6 md:justify-center lg:justify-normal rounded-xl">
       {images.map((src, i) => (
-        <MotionDiv
+        <GalleryCard
           key={i}
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4, delay: i * 0.1 }}
-          viewport={{ once: true }}
-        >
-          <GalleryCard
-            src={src}
-            alt={`Gallery Image ${i + 1}`}
-            setActive={() =>
-              setActiveIndex((index) => (index === i ? null : i))
-            }
-            className={activeIndex === i ? "w-[345px]" : "w-[163px]"}
-          />
-        </MotionDiv>
+          src={src}
+          alt={`Gallery Image ${i + 1}`}
+          setActive={() => setActiveIndex((index) => (index === i ? null : i))}
+          className={
+            activeIndex === i
+              ? "md:w-[163px] lg:w-[345px]"
+              : "md:w-[163px] lg:w-[163px]"
+          }
+        />
       ))}
     </div>
   );

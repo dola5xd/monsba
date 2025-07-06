@@ -12,15 +12,17 @@ function About() {
       transition={{ staggerChildren: 0.5 }}
       viewport={{ once: true, amount: 0.2 }}
       id="about"
-      className="flex flex-col items-center min-h-screen p-20"
+      className="flex flex-col items-center p-10 min-h-dvh lg:p-20"
     >
-      <h2 className="flex flex-col items-center text-5xl font-bold">
-        <span className="text-xl text-muted lato-font">What We Do</span>
+      <h2 className="flex flex-col items-center text-2xl font-bold text-center sm:text-3xl md:text-start lg:text-4xl xl:text-5xl">
+        <span className="text-sm sm:text-base md:text-xl text-muted lato-font">
+          What We Do
+        </span>
         Expert Event Planning, Every Step of the Way
       </h2>
       <MotionDiv
         transition={{ staggerChildren: 0.5 }}
-        className="flex flex-col gap-y-10 mt-10 *:odd:flex-row *:not-odd:flex-row-reverse px-20"
+        className="flex flex-col py-10 gap-y-10 lg:gap-y-0 xl:gap-y-10 xl:px-20"
       >
         <AboutCard
           imageSrc="/assets/About/Birthday parties.svg"

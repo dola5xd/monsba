@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { div as MotionDiv } from "motion/react-client";
 
 function GalleryCard({
   src,
@@ -12,8 +13,11 @@ function GalleryCard({
   className?: string;
 }) {
   return (
-    <div
-      className={`relative h-[274px] transition-all rounded-lg duration-500 cursor-pointer ${className}`}
+    <MotionDiv
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      className={`aspect-video md:aspect-auto relative h-[274px] transition-all rounded-lg duration-500 md:cursor-pointer ${className}`}
       onClick={setActive}
       role="button"
       aria-label={alt}
@@ -25,10 +29,10 @@ function GalleryCard({
         alt={alt}
         fill
         loading="lazy"
-        sizes="(max-width: 768px) 80vw, (max-width: 1280px) 33vw, 163px"
+        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
         className="object-cover transition-transform duration-300 rounded-lg shadow-lg"
       />
-    </div>
+    </MotionDiv>
   );
 }
 

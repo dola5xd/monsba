@@ -48,9 +48,8 @@ body {
 .testimonial-swiper .swiper-pagination {
   display: flex;
   justify-content: flex-start;
-  gap: 4px;
-  margin-bottom: 1.5rem;
-  padding-left: 1rem;
+  gap: 2px;
+  padding: 0 0 0.5rem 1rem;
 }
 .testimonial-swiper .swiper-pagination-bullet {
   width: 10px;
@@ -63,4 +62,11 @@ body {
 .testimonial-swiper .swiper-pagination-bullet-active {
   background-color: #f43f5e;
   width: 24px;
+}
+
+/* sm: */
+@media (width >= 40rem /* 640px */) {
+  .testimonial-swiper .swiper-pagination {
+    gap: 4px;
+  }
 }
